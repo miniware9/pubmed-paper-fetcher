@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetches PubMed papers with pharmaceutical/biotech authors"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{ include = "pubmed_paper_fetcher", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+lxml = "^6.0.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.cli:main"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.16.1"
+types-requests = "^2.32.4.20250611"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
