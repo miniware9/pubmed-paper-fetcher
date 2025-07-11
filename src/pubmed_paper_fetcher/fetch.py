@@ -7,7 +7,7 @@ import re
 
 BASE_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
 
-def fetch_pubmed_ids(query: str, retmax: int = 20, debug: bool = False) -> List[str]:
+def fetch_pubmed_ids(query: str, retmax: int = 10000, debug: bool = False) -> List[str]:
     """Fetch PubMed IDs matching a query."""
     url = f"{BASE_URL}esearch.fcgi"
     params = {
